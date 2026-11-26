@@ -1,22 +1,22 @@
 # Test repo
 
-## divide(a, b)
+## triangle_area(a, h)
 
-Пример безопасного деления с проверкой деления на ноль.
+Пример вычисления площади треугольника по основанию и высоте.
 
 ```python
-def divide(a: float, b: float) -> float:
-    """Divide a by b.
+def triangle_area(a: float, h: float) -> float:
+    """Calculate triangle area by base and height.
 
     Raises:
-        ValueError: if b == 0
+        ValueError: if a <= 0 or h <= 0
     """
-    if b == 0:
-        raise ValueError("Division by zero is not allowed")
-    return a / b
+    if a <= 0 or h <= 0:
+        raise ValueError("Base and height must be positive")
+    return a * h / 2
 
 
 # Example:
-# divide(10, 2) -> 5.0
-# divide(10, 0) -> ValueError
+# triangle_area(10, 5) -> 25.0
+# triangle_area(10, -1) -> ValueError
 ```
